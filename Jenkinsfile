@@ -13,8 +13,19 @@ pipeline {
     }
 
     stage('Run project') {
-      steps {
-        sh 'python3 main.py'
+      parallel {
+        stage('Run project') {
+          steps {
+            sh 'python3 main.py'
+          }
+        }
+
+        stage('Console Log') {
+          steps {
+            sh 'ls -al'
+          }
+        }
+
       }
     }
 
