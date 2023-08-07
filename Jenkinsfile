@@ -14,15 +14,32 @@ pipeline {
 
     stage('Run project') {
       parallel {
-        stage('Run project') {
+        stage('Install requirements') {
           steps {
-            sh 'python3 main.py'
+            sh 'pip install -r requirements.txt'
           }
         }
 
         stage('Console Log') {
           steps {
             sh 'ls -al'
+          }
+        }
+
+      }
+    }
+
+    stage('Check library version') {
+      parallel {
+        stage('Check library version') {
+          steps {
+            sh 'pip freeze'
+          }
+        }
+
+        stage('Run Project') {
+          steps {
+            sh 'python main.py'
           }
         }
 
