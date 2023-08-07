@@ -1,0 +1,101 @@
+/* login.css */
+* {
+	font-family: 'Merriweather', serif;
+}
+
+body {
+	/* font-family: Arial, sans-serif; */
+	background-image: url(../static/images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+img {
+	display: block;
+	margin: auto;
+	width: 70%;
+}
+
+.login-box {
+	max-width: 400px;
+	margin: 100px auto;
+	background-color: #fff;
+	padding: 40px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+h1{
+	text-align: center;
+}
+
+.title {
+	font-size: 32px;
+	margin: 0 0 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type="submit"],
+button {
+	background-color: #D71920;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	width: 48%;
+}
+
+/* Adjustments for 1024x600 display */
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+	img {
+		width: 60%;
+	}
+
+	.login-box {
+		margin: 60px auto;
+		padding: 30px;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	input[type="text"],
+	input[type="password"] {
+		padding: 8px;
+		margin-bottom: 15px;
+	}
+
+	input[type="submit"],
+	button {
+		padding: 8px;
+		width: 45%;
+	}
+}

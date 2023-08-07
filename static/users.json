@@ -1,0 +1,74 @@
+[
+  {
+    "username": "Hung",
+    "password": "ktr123",
+    "fullName": "Vũ Hùng Quang",
+    "title": "Phó phòng hành chính",
+    "image": "Hung.jpg",
+    "meetings": [
+      {
+        "date": "2023-07-28",
+        "time": "10:00 Chiều",
+        "title": "Tiến độ thực thi",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-29",
+        "time": "2:00 Chiều",
+        "title": "Tiến độ thực thi",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      }
+    ]
+  },
+  {
+    "username": "Dang",
+    "password": "ktr123",
+    "fullName": "Hồ Hà Đăng",
+    "title": "Phó phòng hành chính",
+    "image": "Dang.jpg",
+    "qrCode": "/static/images/qr-code.png",
+    "meetings": [
+      {
+        "date": "2023-07-28",
+        "time": "10:00 Chiều",
+        "title": "Tiến độ thực thi",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-29",
+        "time": "2:00 Sáng",
+        "title": "Tiến độ thực thi",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      }
+    ]
+  },
+  {
+    "username": "Duy",
+    "password": "ktr123",
+    "fullName": "Nguyễn Hải Duy",
+    "title": "Phó phòng hành chính",
+    "image": "Duy.jpg",
+    
+    "meetings": [
+    
+      {
+        "date": "2023-07-28",
+        "time": "10:00 Chiều",
+        "title": "Tiến độ thực thi",
+        "content": "/static/pdf/demo.pdf",
+        "qrCode": "/static/images/qr-code.png"
+      },
+      {
+        "date": "2023-07-29",
+        "time": "2:00 Sáng",
+        "title": "Tiến độ thực thi",
+        "content": "/static/pdf/demo.pdf",
+        "qrCode": "/static/images/qr-code.png"
+      }
+    ]
+  }
+]

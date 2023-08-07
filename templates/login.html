@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inside the <head> section of your templates -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login-box">
+        <div class="title">ỦY BAN NHÂN DÂN TỈNH ĐIỆN BIÊN</div>
+        <img src="static/images/quochuy.jpg" alt="quoc huy CHXHCNVN" class="quochuy">
+        <h1>Đăng nhập</h1>
+        <form action="login" method="post">
+            <label for="username">Tên người dùng</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="login-block">
+                <input type="submit" value="Đăng nhập">
+                <button id="faceid-btn">Đăng nhập với khuôn mặt</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('faceid-btn').addEventListener('click', function () {
+            window.location.href = '/faceid';
+        });
+    </script>
+
+
+</body>
+
+</html>

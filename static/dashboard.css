@@ -1,0 +1,259 @@
+/* dashboard.css */
+* {
+    font-family: 'Merriweather', serif;
+}
+
+html {
+    border: 1px solid #ccc;
+}
+
+.red-text {
+    color: red;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    background-image: url(../static/images/bg.jpg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.full-name, .full-title, .first{
+    font-size: 28px;
+}
+
+.dashboard-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    background-color: rgba(255, 255, 255, 0.5)
+        /* border: 1px solid #ccc; */
+        /* Add a thin box border around the dashboard container */
+        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+}
+
+ul {
+    margin-left: 5px;
+}
+
+.bold-text {
+    font-weight: bold;
+    text-align: center;
+    /* font-size: 24px */
+}
+
+h1 {
+    text-align: center;
+    /* Center the title */
+    font-size: 24px;
+    /* Adjust for 1024x600 display */
+    margin: 5px 0 0 0;
+    /* Add margin for spacing */
+    /* border: 1px solid #ccc; */
+    /* Add a thin box border around the name and title section */
+    padding: 5px;
+    /* Add some padding to create space between content and border */
+}
+
+.top-section {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow elements to wrap to a new line if needed */
+    /* justify-content: space-between; */
+    border: 1px solid #ccc;
+    /* Add a thin box border around the top section */
+    /* padding: 10px; */
+    /* Add some padding to create space between content and border */
+    /* background: #fff; */
+}
+
+.name-title {
+    flex: 1 1 100%;
+    /* Occupy the full width initially, but allow to shrink if necessary */
+    text-align: center;
+    /* Center the name and title */
+    border: 1px solid #ccc;
+    /* Add a thin box border around the name and title section */
+    padding: 10px;
+    /* Add some padding to create space between content and border */
+}
+
+.qr-code {
+    flex: 0 0 30%;
+    text-align: center;
+    /* Center the QR Code image */
+    border: 1px solid #ccc;
+    /* Add a thin box border around the QR Code section */
+    padding: 10px;
+    /* Add some padding to create space between content and border */
+}
+
+.qr-code img {
+    max-width: 100%;
+    height: auto;
+}
+
+.meeting-schedule {
+    flex: 0 0 65%;
+    border: 1px solid #ccc;
+    /* Add a thin box border around the Meeting Schedule section */
+    padding: 10px;
+    /* Add some padding to create space between content and border */
+}
+
+.meeting-schedule ul {
+    list-style: none;
+    padding: 0;
+}
+
+.meeting-schedule li {
+    font-size: 18px;
+    /* Adjust for 1024x600 display */
+    margin-bottom: 10px;
+}
+
+.current-meeting {
+    flex: 1 1 100%;
+    /* Occupy the full width initially, but allow to shrink if necessary */
+    border: 1px solid #ccc;
+    /* Add a thin box border around the Current Meeting section */
+    padding: 10px;
+    /* Add some padding to create space between content and border */
+    margin-top: 20px;
+    /* Add margin for spacing */
+    /* background: #fff; */
+}
+
+.current-meeting h3 {
+    font-size: 20px;
+    /* Adjust for 1024x600 display */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.current-meeting p {
+    font-size: 16px;
+    /* Adjust for 1024x600 display */
+    line-height: 1.6;
+}
+
+/* Adjustments for 1024x600 display */
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 24px;
+        /* Adjust for 1024x600 display */
+        padding: 5px;
+        /* Adjust for 1024x600 display */
+    }
+
+    h2 {
+        font-size: 24px;
+        /* Adjust for 1024x600 display */
+        padding: 5px;
+        /* Adjust for 1024x600 display */
+    }
+
+    .dashboard-container {
+        padding: 0 10px 0 10px;
+        /* Adjust for 1024x600 display */
+        margin: 0 10px 0 10px;
+    }
+
+    /* .top-section {
+        /* flex-direction: colum; */
+        /* Adjust for 1024x600 display */
+     */
+
+    .name-title,
+    .qr-code,
+    .meeting-schedule,
+    .current-meeting {
+        margin-bottom: 5px;
+        /* width: 100%; */
+        /* Adjust for 1024x600 display */
+    }
+
+    /* .name-title,
+    .qr-code,
+    .meeting-schedule {
+        margin-bottom: 10px;
+        /* Add margin between elements at 1024x600 display }*/
+
+    .qr-code {
+        flex: 0 0 30%;
+        /* Occupy the full width at 1024x600 display */
+    }
+
+    .meeting-schedule {
+        flex: 0 0 65%;
+        padding: 10px 0 10px;
+        /* Occupy the full width at 1024x600 display */
+    }
+
+    input[type="submit"] {
+        background-color: #D71920;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        width: 100px;
+    }
+
+    .pdf-container {
+        width: 100%;
+        height: 85%;
+        margin-top: 20px;
+    }
+
+    .pdf-embed {
+        height: 500px;
+        width: 100%;
+        /* z-index: 1; */
+    }
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: #D71920;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100px;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 85%;
+    margin-top: 20px;
+}
+
+embed {
+    height: 500px;
+    width: 100%;
+    /* z-index: 1; */
+}
+
+.title-block,
+.name-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.full-name,
+.full-title {
+    /* font-size: 24px; */
+    margin-left: 5px;
+}

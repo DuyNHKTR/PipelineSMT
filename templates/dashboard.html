@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1 class="red-text">ỦY BAN NHÂN DÂN TỈNH ĐIỆN BIÊN KÍNH CHÀO QUÝ KHÁCH</h1>
+        </div>
+        <div class="top-section">
+            <div class="name-title">
+                <div class="name-block">
+                    <div class="bold-text first">Họ và tên: </div>
+                    <div class="full-name">{{ user["fullName"] }}</div>
+                </div>
+                <div class="title-block">
+                    <div class="bold-text first">Chức vụ: </div>
+                    <div class="full-title">{{ user["title"] }}</div>
+                </div>
+            </div>
+            <div class="meeting-schedule">
+                <h2 class="bold-text">Lịch họp</h2>
+                <ul>
+                    {% for meeting in user["meetings"] %}
+                    <li>
+                        <span class="meeting-time">{{ meeting["time"] }} :</span>
+                        <span class="meeting-title">{{ meeting["title"] }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="qr-code">
+                <h2 class="bold-text">Tài liệu cuộc họp</h2>
+                <h3>Quét mã QR để nhận tài liệu</h3>
+                <div class="qr-img">
+                    <img src="{{ user["meetings"][0]["qrCode"] }}" alt="QR Code">
+                </div>
+            </div>
+        </div>
+        <div class="current-meeting">
+            <div class="meeting-content">
+                <h2 class="bold-text">{{ user["meetings"][0]["title"] }}</h2>
+                <div class="pdf-container">
+                    <embed scale="tofit" src="{{ user["meetings"][0]["content"] }}" class="pdf-embed" type="application/pdf" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="/logout" method="post">
+        <input type="submit" value="Đăng xuất">
+    </form>
+
+    <script>
+        function updateEmbedDimensions() {
+            const embedContainer = document.querySelector('.pdf-container');
+            const embedElement = embedContainer.querySelector('embed');
+            // const aspectRatio = 56.25; // Adjust this value to match the padding-bottom value in CSS
+
+            // const width = embedContainer.offsetWidth;
+            const height = 500;
+
+            // embedContainer.style.paddingBottom = height + '%';
+            embedElement.style.height = height + 'px';
+            embedElement.style.width = 100 + '%';
+        }
+
+        window.addEventListener('resize', updateEmbedDimensions);
+    </script>
+</body>
+
+</html>
