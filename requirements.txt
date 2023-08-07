@@ -1,7 +1,6 @@
-python==3.9.2
-opencv-python==4.8.0
-tflite-runtime==2.8.0
+
+opencv-python
+tflite-runtime
 numpy
-glob
 scikit-image
 scikit-learn
