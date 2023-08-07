@@ -12,5 +12,11 @@ pipeline {
       }
     }
 
+    stage('Run project') {
+      steps {
+        sh 'python3 main.py'
+      }
+    }
+
   }
 }
