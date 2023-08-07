@@ -4,7 +4,6 @@ import numpy as np
 import os
 import glob
 from skimage.transform import SimilarityTransform
-from FaceIDLight.helper import get_file
 from scipy.spatial import distance
 from sklearn.metrics.pairwise import cosine_distances
 
@@ -22,15 +21,13 @@ FILE_HASHES = {
 
 
 class FaceID:
-    def __init__(self, gal_dir: str = None):
+    def __init__(self, gal_dir):
         self.detector = FaceDetection()
         self.recognizer = FaceRecognition()
         self.gal_embs = []
         self.gal_names = []
         self.gal_faces = []
-        self.gal_dir = (
-            gal_dir if gal_dir is not None else get_file(BASE_URL + "sample_gallery.zip", FILE_HASHES["sample_gallery"], is_zip=True)
-        )
+        self.gal_dir = gal_dir
         self.update_gallery()
 
     def update_gallery(self):
@@ -102,9 +99,7 @@ class FaceRecognition:
         model_type: str = "mobileNet",
     ):
         
-        if model_path is None:
-            model_path = get_file(BASE_URL + model_type + ".tflite", FILE_HASHES[model_type])
-        self.face_recognizer = tflite.Interpreter(model_path)
+        self.face_recognizer = tflite.Interpreter("./models/mobileNet.tflite")
         
         '''if model_path is None:
             model_path = get_file(BASE_URL + model_type + ".tflite", FILE_HASHES[model_type])
@@ -204,13 +199,13 @@ class FaceDetection:
         self._steps_threshold = steps_threshold
         self._scale_factor = scale_factor
         self.p_net = tflite.Interpreter(
-            model_path=get_file(BASE_URL + "p_net.tflite", FILE_HASHES["p_net"])
+            model_path="./models/p_net.tflite"
         )
         self.r_net = tflite.Interpreter(
-            model_path=get_file(BASE_URL + "r_net.tflite", FILE_HASHES["r_net"])
+            model_path="./models/r_net.tflite"
         )
         self.o_net = tflite.Interpreter(
-            model_path=get_file(BASE_URL + "o_net.tflite", FILE_HASHES["o_net"])
+            model_path="./models/o_net.tflite"
         )
 
     def detect_faces(self, img):
