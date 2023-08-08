@@ -61,9 +61,7 @@ pipeline {
     }
     stage('Push to Docker Hub') {
             steps {
-                withCredentials([string(credentialsId: 'DOCKERHUB_CREDENTIALS', variable: 'DOCKERHUB_CREDENTIALS')]) {
-                    sh 'docker login -u username -p $DOCKERHUB_CREDENTIALS'
-                    sh 'docker push kotoracompany/smt'
+              sh 'docker push kotoracompany/smt'
                 }
             }
         }
