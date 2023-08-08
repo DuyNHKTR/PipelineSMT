@@ -39,7 +39,9 @@ pipeline {
 
         stage('Clean Node') {
           steps {
-            sh 'docker rmi -f $(docker images -q)'
+            sh '''docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi -f $(docker images -q)'''
           }
         }
 
