@@ -53,5 +53,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh 'docker images'
+      }
+    }
+
   }
 }
