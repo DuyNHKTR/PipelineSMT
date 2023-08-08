@@ -41,6 +41,7 @@ pipeline {
           steps {
             timeout(time: 10) {
               sh 'python main.py'
+              sh 'quit'
             }
 
           }
