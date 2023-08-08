@@ -4,9 +4,9 @@ FROM python:3.9
 # Set the working directory to /app
 WORKDIR /app
 
-# Install system dependencies (including libGL.so.1)
+# Install system dependencies (including libGL.so.1 and v4l-utils)
 RUN apt-get update && \
-    apt-get install -y libgl1-mesa-glx
+    apt-get install -y libgl1-mesa-glx v4l-utils
 
 # Copy the current directory contents into the container at /app
 COPY . /app
