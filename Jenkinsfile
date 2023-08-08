@@ -39,7 +39,7 @@ pipeline {
       parallel {
         stage('Build Docker') {
           steps {
-            sh '''docker build -t SMT .
+            sh '''docker build -t kotoracompany/smt .
 '''
           }
         }
