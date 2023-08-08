@@ -39,9 +39,8 @@ pipeline {
 
         stage('Run Project') {
           steps {
-            sh 'python main.py'
             timeout(time: 10) {
-              sh 'exit()'
+              sh 'python main.py'
             }
 
           }
