@@ -30,23 +30,8 @@ pipeline {
     }
 
     stage('Check library version') {
-      parallel {
-        stage('Check library version') {
-          steps {
-            sh 'pip freeze'
-          }
-        }
-
-        stage('Run Project') {
-          steps {
-            timeout(time: 10) {
-              sh 'python main.py'
-              sh 'quit'
-            }
-
-          }
-        }
-
+      steps {
+        sh 'pip freeze'
       }
     }
 
