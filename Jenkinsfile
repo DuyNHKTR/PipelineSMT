@@ -46,5 +46,23 @@ pipeline {
       }
     }
 
+    stage('Build Docker') {
+      parallel {
+        stage('Build Docker') {
+          steps {
+            sh '''docker build -t SMT .
+'''
+          }
+        }
+
+        stage('Docker Log') {
+          steps {
+            sh 'docker images'
+          }
+        }
+
+      }
+    }
+
   }
 }
