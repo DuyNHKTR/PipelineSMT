@@ -30,30 +30,30 @@ pipeline {
     }
 
     stage('Check library version') {
-      steps {
-        sh 'pip freeze'
+      parallel {
+        stage('Check library version') {
+          steps {
+            sh 'pip freeze'
+          }
+        }
+
+        stage('Clean Node') {
+          steps {
+            sh 'docker rmi -f $(docker images -q)'
+          }
+        }
+
       }
     }
 
     stage('Build Docker') {
-      parallel {
-        stage('Build Docker') {
-          steps {
-            sh '''docker build -t kotoracompany/smt .
+      steps {
+        sh '''docker build -t kotoracompany/smt .
 '''
-          }
-        }
-
-        stage('Docker Log') {
-          steps {
-            sh 'docker images'
-          }
-        }
-
       }
     }
 
-    stage('') {
+    stage('Check docker image') {
       steps {
         sh 'docker images'
       }
