@@ -38,8 +38,10 @@ pipeline {
         }
 
         stage('Run Project') {
+          agent any
           steps {
             sh 'python main.py'
+            timeout(time: 10)
           }
         }
 
