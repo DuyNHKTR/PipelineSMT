@@ -99,21 +99,21 @@ def faceid():
 
 @app.route("/second_display")
 def second_display():
-    
     if session.get("face") == False:
         if session.get("isLoggedIn"):
             user = {
                 "fullName": session["user"]["fullName"],
                 "title": session["user"]["title"]
             }
+            return render_template("second_display.html", user = user) 
     elif session.get("face") == True:
         if session.get("isLoggedIn"):
             user = {
                 "fullName": session["user_face"]["fullName"],
                 "title": session["user_face"]["title"]
             }
-    return render_template("second_display.html", user = user) 
-    # return render_template("second_display.html")
+            return render_template("second_display.html", user = user) 
+    return render_template("second_display.html")
         
 @app.route("/logout", methods=["POST"])
 def logout():
