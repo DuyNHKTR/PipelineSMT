@@ -2,72 +2,116 @@
   {
     "username": "Hung",
     "password": "ktr123",
-    "fullName": "Vũ Hùng Quang",
+    "fullName": "Vũ Quang Hùng",
     "title": "Phó phòng hành chính",
     "image": "Hung.jpg",
     "meetings": [
       {
-        "date": "2023-07-28",
-        "time": "10:00 Chiều",
-        "title": "Tiến độ thực thi",
+        "date": "2023-07-29",
+        "time": "8:00 - 10:00",
+        "title": "Chăm Sóc Sức Khỏe Dân Công",
         "qrCode": "/static/images/qr-code.png",
         "content": "/static/pdf/demo.pdf"
       },
       {
-        "date": "2023-07-29",
-        "time": "2:00 Chiều",
-        "title": "Tiến độ thực thi",
+        "date": "2023-07-28",
+        "time": "10:00 - 12:00",
+        "title": "Xây Dựng Nền Hành Chính Hiện Đại",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-28",
+        "time": "14:00 - 16:00",
+        "title": "Việt Nam Tiến Tới",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-28",
+        "time": "14:00 - 16:00",
+        "title": "Hội Thảo Chiến Lược Phát Triển Bền Vững",
         "qrCode": "/static/images/qr-code.png",
         "content": "/static/pdf/demo.pdf"
       }
+      
+      
     ]
   },
   {
-    "username": "Dang",
+    "username": "Trung",
     "password": "ktr123",
-    "fullName": "Hồ Hà Đăng",
+    "fullName": "Nguyễn Đình Trung",
     "title": "Phó phòng hành chính",
-    "image": "Dang.jpg",
+    "image": "Trung.jpg",
     "qrCode": "/static/images/qr-code.png",
     "meetings": [
       {
-        "date": "2023-07-28",
-        "time": "10:00 Chiều",
-        "title": "Tiến độ thực thi",
+        "date": "2023-07-29",
+        "time": "8:00 Sáng",
+        "title": "Chăm Sóc Sức Khỏe Dân Công",
         "qrCode": "/static/images/qr-code.png",
         "content": "/static/pdf/demo.pdf"
       },
       {
-        "date": "2023-07-29",
-        "time": "2:00 Sáng",
-        "title": "Tiến độ thực thi",
+        "date": "2023-07-28",
+        "time": "10:00 Sáng",
+        "title": "Xây Dựng Nền Hành Chính Hiện Đại",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-28",
+        "time": "2:00 Chiều",
+        "title": "Việt Nam Tiến Tới",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-28",
+        "time": "4:00 Chiều",
+        "title": "Hội Thảo Chiến Lược Phát Triển Bền Vững",
         "qrCode": "/static/images/qr-code.png",
         "content": "/static/pdf/demo.pdf"
       }
     ]
   },
   {
-    "username": "Duy",
+    "username": "Quan",
     "password": "ktr123",
-    "fullName": "Nguyễn Hải Duy",
+    "fullName": "Nguyễn Đình Quân",
     "title": "Phó phòng hành chính",
-    "image": "Duy.jpg",
+    "image": "Quan.jpg",
     
     "meetings": [
     
       {
-        "date": "2023-07-28",
-        "time": "10:00 Chiều",
-        "title": "Tiến độ thực thi",
-        "content": "/static/pdf/demo.pdf",
-        "qrCode": "/static/images/qr-code.png"
+        "date": "2023-07-29",
+        "time": "8:00 Sáng",
+        "title": "Chăm Sóc Sức Khỏe Dân Công",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
       },
       {
-        "date": "2023-07-29",
-        "time": "2:00 Sáng",
-        "title": "Tiến độ thực thi",
-        "content": "/static/pdf/demo.pdf",
-        "qrCode": "/static/images/qr-code.png"
+        "date": "2023-07-28",
+        "time": "10:00 Sáng",
+        "title": "Xây Dựng Nền Hành Chính Hiện Đại",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-28",
+        "time": "2:00 Chiều",
+        "title": "Việt Nam Tiến Tới",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
+      },
+      {
+        "date": "2023-07-28",
+        "time": "4:00 Chiều",
+        "title": "Hội Thảo Chiến Lược Phát Triển Bền Vững",
+        "qrCode": "/static/images/qr-code.png",
+        "content": "/static/pdf/demo.pdf"
       }
     ]
   }
