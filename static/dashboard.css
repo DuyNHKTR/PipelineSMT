@@ -20,7 +20,9 @@ body {
     justify-content: center;
 }
 
-.full-name, .full-title, .first{
+.full-name,
+.full-title,
+.first {
     font-size: 28px;
 }
 
@@ -109,7 +111,7 @@ h1 {
 }
 
 .meeting-schedule li {
-    font-size: 18px;
+    /* font-size: 18px; */
     /* Adjust for 1024x600 display */
     margin-bottom: 10px;
 }
@@ -142,7 +144,7 @@ h1 {
 /* Adjustments for 1024x600 display */
 @media only screen and (max-width: 1024px) {
     h1 {
-        font-size: 24px;
+        font-size: 30px;
         /* Adjust for 1024x600 display */
         padding: 5px;
         /* Adjust for 1024x600 display */
@@ -163,16 +165,18 @@ h1 {
 
     /* .top-section {
         /* flex-direction: colum; */
-        /* Adjust for 1024x600 display */
-     */
-
-    .name-title,
+    /* Adjust for 1024x600 display */
+    */ .name-title,
     .qr-code,
     .meeting-schedule,
     .current-meeting {
         margin-bottom: 5px;
         /* width: 100%; */
         /* Adjust for 1024x600 display */
+    }
+
+    .meeting-time {
+        font-weight: bold;
     }
 
     /* .name-title,
@@ -187,6 +191,7 @@ h1 {
     }
 
     .meeting-schedule {
+        font-size: 20px;
         flex: 0 0 65%;
         padding: 10px 0 10px;
         /* Occupy the full width at 1024x600 display */
@@ -210,7 +215,7 @@ h1 {
     }
 
     .pdf-embed {
-        height: 500px;
+        height: 550px;
         width: 100%;
         /* z-index: 1; */
     }
